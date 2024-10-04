@@ -1,0 +1,103 @@
+/* Default navbar hidden for smaller screens */
+.navbar {
+    display: flex;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: antiquewhite;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #081b29;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+/* Base styles for larger screens (desktops) */
+@media (min-width: 1200px) {
+    /* You can adjust layout here for larger screens if necessary */
+}
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+    .home-content h1 {
+        font-size: 48px;
+    }
+    .home-content h3 {
+        font-size: 28px;
+    }
+    .home-img {
+        width: 280px;
+        height: auto;
+    }
+}
+
+/* Mobile devices (landscape and portrait) */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+    .home-content {
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .home-content h1 {
+        font-size: 36px;
+    }
+    .home-content h3 {
+        font-size: 24px;
+    }
+    .home-img {
+        width: 200px;
+    }
+    .pro-cont {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-cont {
+        flex-direction: column;
+    }
+}
+
+/* Small mobile devices (portrait mode) */
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+    .home-content h3 {
+        font-size: 20px;
+    }
+    .home-img {
+        width: 150px;
+    }
+    .pro-cont div img {
+        width: 100%;
+    }
+    .skill-cont img {
+        width: 100px;
+        height: auto;
+    }
+}
